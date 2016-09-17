@@ -1,4 +1,4 @@
-FROM tklx/base:0.1.0
+FROM tklx/base:0.1.1
 
 RUN set -x \
     && sed -i 's/jessie/testing/g' /etc/apt/sources.list.d/*.list \
