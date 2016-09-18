@@ -1,5 +1,4 @@
 # !include frombase
-# !include use-testing
 # !include tini
 
 ARG NEED_USER='mysql'

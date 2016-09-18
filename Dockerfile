@@ -1,7 +1,8 @@
 FROM tklx/base:0.1.1
 
 RUN set -x \
-    && sed -i 's/jessie/testing/g' /etc/apt/sources.list.d/*.list \
+    && sed -i 's/jessie/testing/g' /etc/apt/sources.list.d/sources.list \
+    && sed -i 's/jessie/testing/g' /etc/apt/sources.list.d/security.sources.list \
     && apt-get -y update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade \
     && apt-clean --aggressive
